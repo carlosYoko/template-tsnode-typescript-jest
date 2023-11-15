@@ -1,7 +1,6 @@
 # Proyecto TypeScript con Jest
 
 Este es un proyecto base de TypeScript configurado con Jest.
-Incluye configuración CI con GitHub Actions.
 
 ---
 
@@ -29,7 +28,7 @@ npx tsc --init
 
 ## Scripts
 
-Tener las siguientes configuraciones de scripts y el type en el `package.json`:
+Incluir scripts y configuracion del type en el archivo `package.json`:
 
 ```json
 "type": "module",
