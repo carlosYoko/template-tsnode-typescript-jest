@@ -22,7 +22,7 @@ npm init -y
 npm install typescript ts-node jest ts-jest @types/jest --save-dev
 ```
 
-- Crar archivo `tsconfig.json`
+- Crear archivo `tsconfig.json`
 
 ```bash
 npx tsc --init
