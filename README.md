@@ -19,7 +19,7 @@ npm init -y
 - Instalar las dependencias
 
 ```bash
-npm install typescript ts-node jest @types/jest --save-dev
+npm install typescript ts-node jest ts-jest @types/jest --save-dev
 ```
 
 - Crar archivo `tsconfig.json`
