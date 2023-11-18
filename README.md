@@ -78,6 +78,7 @@ Hay que editar el archivo tsconfig.json con la siguiente configuración:
     /* Completeness */
     "skipLibCheck": true
   },
+  "exclude": ["src/__tests__/**/*"],
   "ts-node": {
     "esm": true
   }
