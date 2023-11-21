@@ -68,7 +68,7 @@ Hay que editar el archivo tsconfig.json con la siguiente configuración:
     "target": "ES6",
     "module": "ESNext",
     "rootDir": "./src",
-    "types": ["node", "jest", "inquirer"],
+    "types": ["node", "jest"],
     /* Emit */
     "outDir": "./dist",
     /* Interop Constraints */
