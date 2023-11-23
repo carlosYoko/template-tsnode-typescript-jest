@@ -3,7 +3,7 @@
 Este es un proyecto base de TypeScript configurado con Jest.
 **Nota** Cuando se transpila de TS a JS, ES6 no detecta los imports de otros archivos.
 La solución seria añadir la extension .js en las importaciones de archivos TS para que cuando se haga la transpilacion se mantenga la extension y el codigo funcione o utilizar webpack con la configuracion adecuada.<br>
-**Atención:** Crear carpeta dist en la raiz del proyecto para evitar error de tsconfig.
+**Atención:** Crear carpeta /dist en la raiz del proyecto para evitar error de tsconfig.
 
 ---
 
