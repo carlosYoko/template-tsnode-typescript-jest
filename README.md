@@ -37,10 +37,11 @@ Incluir scripts y configuracion del type en el archivo `package.json`:
 "type": "module",
 
 "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run remove-tests-folder",
+    "remove-tests-folder": "rm -rf dist/__tests__",
     "build:watch": "tsc --build tsconfig.json --watch",
     "test": "jest --coverage",
-    "start": "npx ts-node src/index.ts"
+    "test:watch": "jest --coverage --watchAll",
 }
 ```
 
@@ -80,7 +81,7 @@ Hay que editar el archivo tsconfig.json con la siguiente configuración:
     /* Completeness */
     "skipLibCheck": true
   },
-  "exclude": ["src/__tests__/**/*"],
+  "include": ["./src/**/*.ts", "!./src/__tests__/**/*"],
   "ts-node": {
     "esm": true
   }
