@@ -1,8 +1,8 @@
 # Proyecto TypeScript con Jest
 
-Este es un proyecto base de TypeScript configurado con Jest.
-**Nota** Cuando se transpila de TS a JS, ES6 no detecta los imports de otros archivos.
-La solución seria añadir la extension .js en las importaciones de archivos TS para que cuando se haga la transpilacion se mantenga la extension y el codigo funcione o utilizar webpack con la configuracion adecuada.<br>
+Template basic de configuración TypeScript con Jest.
+
+<br>
 **Atención:** Crear carpeta /dist en la raiz del proyecto para evitar error de tsconfig.
 
 ---
@@ -47,16 +47,21 @@ Incluir scripts y configuracion del type en el archivo `package.json`:
 
 ## Configuracion de Jest
 
-Crear un archivo `jest.config.cjs` con la siguiente configuración para Jest:
-**Nota:** Hay que utilizar la extensión .cjs para evitar errores.
+Crear un archivo `jest.config.json` con la siguiente configuración para Jest:
 
-```javascript
-module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-};
+```json
+{
+  "transform": {
+    "^.+\\.tsx?$": [
+      "ts-jest",
+      {
+        "tsconfig": "./tsconfig.json",
+        "module": "commonjs"
+      }
+    ]
+  },
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+}
 ```
 
 ## Configuración de TypeScript
@@ -66,24 +71,17 @@ Hay que editar el archivo tsconfig.json con la siguiente configuración:
 ```json
 {
   "compilerOptions": {
-    /* Language and Environment */
     "target": "ES6",
-    "module": "ESNext",
+    "module": "commonjs",
+    "sourceMap": true,
     "rootDir": "./src",
-    "types": ["node", "jest"],
-    /* Emit */
     "outDir": "./dist",
-    /* Interop Constraints */
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    /* Type Checking */
     "strict": true,
-    /* Completeness */
-    "skipLibCheck": true
+    "esModuleInterop": true,
+    "noEmitOnError": false,
+    "removeComments": true
   },
-  "include": ["./src/**/*.ts", "!./src/__tests__/**/*"],
-  "ts-node": {
-    "esm": true
-  }
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "dist", ".src/__tests__"]
 }
 ```

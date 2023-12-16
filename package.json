@@ -8,8 +8,7 @@
     "build": "tsc && npm run remove-tests-folder",
     "remove-tests-folder": "rm -rf dist/__tests__",
     "build:watch": "tsc --build tsconfig.json --watch",
-    "test": "jest --coverage",
-    "start": "npx ts-node src/index.ts"
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "Carlos Gimenez <carlosgibe@gmail.com>",
