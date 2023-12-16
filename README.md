@@ -1,27 +1,24 @@
 # Proyecto TypeScript con Jest
 
 Template basic de configuración TypeScript con Jest.
-
 <br>
-**Atención:** Crear carpeta /dist en la raiz del proyecto para evitar error de tsconfig.
 
----
-
----
+> [!IMPORTANT]
+> Crear carpeta /dist en la raiz del proyecto para evitar error de tsconfig.
 
 ## Instrucciones para crear el mismo proyecto desde 0
 
 - Crear el archivo `package.json`
 
-```bash
 npm init -y
-```
+
+````
 
 - Instalar las dependencias
 
 ```bash
 npm install typescript ts-node jest ts-jest @types/jest --save-dev
-```
+````
 
 - Crear archivo `tsconfig.json`
 
