@@ -6,7 +6,7 @@ Template basico de configuración TypeScript con Jest.
 > [!IMPORTANT]
 > Crear carpeta /dist en la raiz del proyecto para evitar error de tsconfig.
 
-## Instrucciones para crear el mismo proyecto desde 0
+## Instrucciones para crear la plantilla desde 0
 
 Crear el archivo `package.json` con el siguiente comando:
 
