@@ -8,19 +8,19 @@ Template basic de configuración TypeScript con Jest.
 
 ## Instrucciones para crear el mismo proyecto desde 0
 
-- Crear el archivo `package.json`
+Crear el archivo `package.json` con el siguiente comando:
 
+```bash
 npm init -y
+```
 
-````
-
-- Instalar las dependencias
+Instalar las dependencias con el siguiente comando:
 
 ```bash
 npm install typescript ts-node jest ts-jest @types/jest --save-dev
-````
+```
 
-- Crear archivo `tsconfig.json`
+Crear archivo `tsconfig.json` con el siguiente comando:
 
 ```bash
 npx tsc --init
