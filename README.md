@@ -1,6 +1,6 @@
-# Proyecto TypeScript con Jest
+# Plantilla TypeScript con Jest
 
-Template basic de configuración TypeScript con Jest.
+Template basico de configuración TypeScript con Jest.
 <br>
 
 > [!IMPORTANT]
