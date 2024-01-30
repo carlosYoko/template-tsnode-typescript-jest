@@ -76,7 +76,8 @@ Hay que editar el archivo tsconfig.json con la siguiente configuración:
     "strict": true,
     "esModuleInterop": true,
     "noEmitOnError": false,
-    "removeComments": true
+    "removeComments": true,
+    "types": ["jest"]
   },
   "include": ["./src/**/*"],
   "exclude": ["node_modules", "dist", ".src/__tests__"]
